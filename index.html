@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Best Footballer</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Site Navbar  -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">SA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#cartModal">View Cart</button>
+          </ul>
+        </div>
+    </nav>
+
+<!-- Hero section  -->
+
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="hero-section">
+              <h1 class="text-center pb-2">Unveiling the Titans of Modern Football</h1>
+              <p class="text-center">Step into the realm of football immortality as we journey through the iconic careers of today's most revered athletes. From the mesmerizing dribbles of Lionel Messi to the thunderous strikes of Cristiano Ronaldo, from the flair and finesse of Neymar to the lightning pace of Kylian Mbappe, this exploration transcends mere sport, delving into the realm of cultural phenomenon. Witness the unparalleled skill, unwavering determination, and indomitable spirit that define these titans of the pitch. Join us as we celebrate the awe-inspiring talent and enduring legacy of football's elite.</p>
+            </div>
+        </div>
+    </section>
+    
+<!-- Player Cards  -->
+
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Player Search  -->
+            <div class="col-12 mb-3">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search cards...">
+            </div>
+        </div>
+        <div class="row" id="cardContainer">
+            <!-- Cards will be injected here by JavaScript -->
+        </div>
+        
+    </div>
+
+<!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Selected Cards</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <p id="selectedCount" class="font-weight-bold py-3 px-3 border-bottom border-gray"></p>
+                <div class="modal-body" id="cartBody">
+                    <!-- Selected cards will be shown here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Player Details Modal -->
+    <div class="modal fade" id="playerDetailsModal" tabindex="-1" aria-labelledby="playerDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="playerDetailsModalLabel">Player Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="playerDetailsBody">
+                    <!-- Player details will be shown here -->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+
+<!-- Site Footer  -->
+
+    <footer class="footer bg-light py-5">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h5>About Us</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis id nisi sollicitudin vehicula.</p>
+            </div>
+            <div class="col-md-3">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                <li class="nav-item"><a href="#" class="nav-link text-muted px-0">Clubs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-muted px-0">Leauges</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-muted px-0">Players</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-muted px-0">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                  <li class="nav-item"><a href="#" class="nav-link text-muted px-0">Clubs</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link text-muted px-0">Leauges</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link text-muted px-0">Players</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link text-muted px-0">Contact</a></li>
+                </ul>
+              </div>
+            <div class="col-md-2">
+              <h5>Contact Us</h5>
+              <address>
+                123 Main Street<br>
+                City, State ZIP<br>
+                <abbr title="Phone">P:</abbr> (123) 456-7890
+              </address>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp-square"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-muted text-center">
+              ©All Rights Sajib Ahmed 2024
+            </div>
+          </div>
+      </div>
+    </footer>
+    
+    <script src="./main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

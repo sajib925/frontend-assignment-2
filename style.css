@@ -1,0 +1,21 @@
+*,*::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.selected {
+    border: 2px solid rgb(215, 72, 72);
+}
+.selected .select-button {
+    background-color: rgb(215, 72, 72);
+    border-color: rgb(215, 72, 72);
+}
+.social-icons i {
+    font-size: 1.5em;
+    margin-right: 10px;
+    cursor: pointer;
+    padding-bottom: 12px;
+}
+.social-icons i:hover {
+    color: #007bff;
+}
